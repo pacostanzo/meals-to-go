@@ -25,3 +25,20 @@ export const Address = styled(Text)`
 export const Info = styled.View`
   padding: ${(props) => props.theme.space.MEDIUM};
 `;
+
+export const Rating = styled.View`
+  flex-direction: row;
+  padding-top: ${(props) => props.theme.space.SMALL};
+  padding-bottom: ${(props) => props.theme.space.SMALL};
+`;
+
+export const Section = styled.View`
+  flex-direction: row;
+  align-items: center;
+`;
+
+export const SectionEnd = styled.View`
+  flex: 1;
+  flex-direction: row;
+  justify-content: flex-end;
+`;
