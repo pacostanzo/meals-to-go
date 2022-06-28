@@ -12,6 +12,7 @@ export const CardCover = styled(Card.Cover)`
 `;
 
 export const Title = styled(Text)`
+  font-family: ${(props) => props.theme.fonts.body};
   padding: ${(props) => props.theme.space.MEDIUM};
   color: ${(props) => props.theme.colors.ui.primary};
 `;
