@@ -1,12 +1,14 @@
 import React from 'react';
 import { Searchbar } from 'react-native-paper';
 
-import { RestaurantInfoCard } from '../components/CardInfo';
+import { RestaurantInfoCard } from '../../components/CardInfo';
 import {
   SafeArea,
   SearchContainer,
   RestaurantListContainer,
-} from './Home.styles';
+} from './Restaurants.styles';
+
+import restaurantsData from '../../../../../assets/restaurants.data';
 
 export const RestaurantsScreen = () => (
   <SafeArea>
@@ -14,7 +16,9 @@ export const RestaurantsScreen = () => (
       <Searchbar />
     </SearchContainer>
     <RestaurantListContainer>
-      <RestaurantInfoCard />
+      {restaurantsData.map((restaurant) => (
+        <RestaurantInfoCard restaurant={restaurant} key={restaurant.key} />
+      ))}
     </RestaurantListContainer>
   </SafeArea>
 );
