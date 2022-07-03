@@ -1,10 +1,9 @@
 import React from 'react';
-import { Text, Image, View } from 'react-native';
 import { SvgXml } from 'react-native-svg';
 import {
   CardContainer,
   CardCover,
-  Title,
+  Icon,
   Info,
   Address,
   Rating,
@@ -13,6 +12,7 @@ import {
 } from './CardInfo.styles';
 
 import { Spacer } from '../../../../components/Spacer';
+import { Text } from '../../../../components/Typography';
 
 import star from '../../../../../assets/star';
 import open from '../../../../../assets/open';
@@ -34,7 +34,7 @@ export const RestaurantInfoCard = ({ restaurant }) => {
     <CardContainer elevation={5}>
       <CardCover key={name} source={{ uri: photos[0] }} />
       <Info>
-        <Title>{name}</Title>
+        <Text variant="label">{name}</Text>
         <Section>
           <Rating>
             {ratingArray.map((_, i) => (
@@ -48,15 +48,13 @@ export const RestaurantInfoCard = ({ restaurant }) => {
           </Rating>
           <SectionEnd>
             {isClosedTemporarily && (
-              <Text variant="label" style={{ color: 'red' }}>
-                CLOSED TEMPORARILY
-              </Text>
+              <Text variant="error">CLOSED TEMPORARILY</Text>
             )}
             <Spacer position="left" size="large">
               {isOpenNow && <SvgXml xml={open} width={20} height={20} />}
             </Spacer>
             <Spacer position="left" size="large">
-              <Image style={{ width: 15, height: 15 }} source={{ uri: icon }} />
+              <Icon source={{ uri: icon }} />
             </Spacer>
           </SectionEnd>
         </Section>

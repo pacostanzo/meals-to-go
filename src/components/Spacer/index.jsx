@@ -1,10 +1,11 @@
 import React from 'react';
-import styled, { useTheme } from 'styled-components/native';
+import { space } from '../../infrastructure/theme/Spacing';
+import { SpacerView } from './Spacer.styles';
 
 const sizeVariant = {
-  small: 1,
-  medium: 2,
-  large: 3,
+  small: space.X_SMALL,
+  medium: space.SMALL,
+  large: space.MEDIUM,
 };
 
 const positionVariant = {
@@ -14,21 +15,15 @@ const positionVariant = {
   bottom: 'marginBottom',
 };
 
-const getVariant = (position, size, theme) => {
-  const sizeIndex = sizeVariant[size];
+const getVariant = (position, size) => {
   const property = positionVariant[position];
-  const value = theme.space[sizeIndex];
+  const value = sizeVariant[size];
 
   return `${property}:${value}`;
 };
 
-const SpacerView = styled.View`
-  ${({ variant }) => variant};
-`;
-
 export const Spacer = ({ position, size, children }) => {
-  const theme = useTheme();
-  const variant = getVariant(position, size, theme);
+  const variant = getVariant(position, size);
   return <SpacerView variant={variant}>{children}</SpacerView>;
 };
 
