@@ -1,5 +1,5 @@
 import styled from 'styled-components/native';
-import { StatusBar, SafeAreaView } from 'react-native';
+import { StatusBar, SafeAreaView, FlatList } from 'react-native';
 
 export const SafeArea = styled(SafeAreaView)`
   flex: 1;
@@ -10,7 +10,6 @@ export const SearchContainer = styled.View`
   padding: ${(props) => props.theme.space.MEDIUM};
 `;
 
-export const RestaurantListContainer = styled.View`
-  flex: 1;
+export const RestaurantListContainer = styled(FlatList)`
   padding: ${(props) => props.theme.space.MEDIUM};
 `;

@@ -2,6 +2,8 @@ import React from 'react';
 import { Searchbar } from 'react-native-paper';
 
 import { RestaurantInfoCard } from '../../components/CardInfo';
+import { Spacer } from '../../../../components/Spacer';
+
 import {
   SafeArea,
   SearchContainer,
@@ -15,10 +17,14 @@ export const RestaurantsScreen = () => (
     <SearchContainer>
       <Searchbar />
     </SearchContainer>
-    <RestaurantListContainer>
-      {restaurantsData.map((restaurant) => (
-        <RestaurantInfoCard restaurant={restaurant} key={restaurant.key} />
-      ))}
-    </RestaurantListContainer>
+    <RestaurantListContainer
+      data={restaurantsData}
+      renderItem={({ item }) => (
+        <Spacer position="bottom" size="large">
+          <RestaurantInfoCard restaurant={item} />
+        </Spacer>
+      )}
+      keyExtractor={(item) => item.key}
+    />
   </SafeArea>
 );

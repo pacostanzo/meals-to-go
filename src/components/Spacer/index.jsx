@@ -1,11 +1,11 @@
 import React from 'react';
-import { space } from '../../infrastructure/theme/Spacing';
+import { theme } from '../../infrastructure/theme';
 import { SpacerView } from './Spacer.styles';
 
 const sizeVariant = {
-  small: space.X_SMALL,
-  medium: space.SMALL,
-  large: space.MEDIUM,
+  small: theme.space.X_SMALL,
+  medium: theme.space.SMALL,
+  large: theme.space.MEDIUM,
 };
 
 const positionVariant = {
