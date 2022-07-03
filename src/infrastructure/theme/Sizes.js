@@ -5,3 +5,4 @@ export const sizes = {
   LARGE: '64px',
   X_LARGE: '128px',
 };
+
