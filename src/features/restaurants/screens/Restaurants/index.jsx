@@ -3,12 +3,9 @@ import { Searchbar } from 'react-native-paper';
 
 import { RestaurantInfoCard } from '../../components/CardInfo';
 import { Spacer } from '../../../../components/Spacer';
+import { SafeArea } from '../../../../components/SafeArea';
 
-import {
-  SafeArea,
-  SearchContainer,
-  RestaurantListContainer,
-} from './Restaurants.styles';
+import { SearchContainer, RestaurantListContainer } from './Restaurants.styles';
 
 import restaurantsData from '../../../../../assets/restaurants.data';
 
