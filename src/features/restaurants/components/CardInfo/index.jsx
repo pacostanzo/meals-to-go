@@ -22,7 +22,7 @@ export const RestaurantInfoCard = ({ restaurant }) => {
     name,
     rating,
     photos,
-    address,
+    vicinity,
     isClosedTemporarily,
     isOpenNow,
     icon,
@@ -58,7 +58,7 @@ export const RestaurantInfoCard = ({ restaurant }) => {
             </Spacer>
           </SectionEnd>
         </Section>
-        <Address>{address}</Address>
+        <Address>{vicinity}</Address>
       </Info>
     </CardContainer>
   );
