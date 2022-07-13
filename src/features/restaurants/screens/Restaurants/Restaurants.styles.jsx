@@ -1,5 +1,5 @@
-import styled from "styled-components/native";
-import { FlatList } from "react-native";
+import styled from 'styled-components/native';
+import { FlatList } from 'react-native';
 
 export const SearchContainer = styled.View`
   padding: ${(props) => props.theme.space.MEDIUM};
