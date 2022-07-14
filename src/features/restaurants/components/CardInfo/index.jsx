@@ -17,7 +17,7 @@ import { Text } from '../../../../components/Typography';
 import star from '../../../../../assets/star';
 import open from '../../../../../assets/open';
 
-export const RestaurantInfoCard = ({ restaurant }) => {
+export const CardInfo = ({ restaurant }) => {
   const {
     name,
     rating,
