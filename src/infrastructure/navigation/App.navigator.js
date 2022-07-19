@@ -11,7 +11,7 @@ import { RestaurantsNavigator } from './Restaurants.navigator';
 const Tab = createBottomTabNavigator();
 
 const TAB_ICON = {
-  Restaurants: 'md-restaurant',
+  TRestaurants: 'md-restaurant',
   Map: 'md-map',
   Settings: 'md-settings',
 };
@@ -42,7 +42,7 @@ const createScreenOptions = ({ route }) => {
 export const AppNavigator = () => (
   <NavigationContainer>
     <Tab.Navigator screenOptions={createScreenOptions}>
-      <Tab.Screen name="Tab Restaurants" component={RestaurantsNavigator} />
+      <Tab.Screen name="TRestaurants" component={RestaurantsNavigator} />
       <Tab.Screen name="Map" component={Map} />
       <Tab.Screen name="Settings" component={Settings} />
     </Tab.Navigator>
