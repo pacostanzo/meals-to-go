@@ -1,4 +1,11 @@
-import React, { useContext, useState, useEffect } from "react";
-import MapView from "react-native-maps";
+import React from 'react';
 
-export const MapScreen = () => <MapView style={{ height: "100%" }} />;
+import { Search } from '../../components/Search';
+import { Map } from './Map.styles';
+
+export const MapScreen = () => (
+  <>
+    <Search />
+    <Map />
+  </>
+);
