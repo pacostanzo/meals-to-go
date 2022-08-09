@@ -4,6 +4,8 @@ import { LocationContext } from '../../../../services/location/location.context'
 import { RestaurantsContext } from '../../../../services/restaurants/restaurants.context';
 
 import { Search } from '../../components/Search';
+import { MapCallout } from '../../components/MapCallout';
+
 import { Map } from './Map.styles';
 
 export const MapScreen = () => {
@@ -41,7 +43,11 @@ export const MapScreen = () => {
                 latitude: restaurant.geometry.location.lat,
                 longitude: restaurant.geometry.location.lng,
               }}
-            />
+            >
+              <Map.Callout>
+                <MapCallout restaurant={restaurant} />
+              </Map.Callout>
+            </Map.Marker>
           );
         })}
       </Map>
