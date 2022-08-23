@@ -1,5 +1,6 @@
 import React from 'react';
 import { SvgXml } from 'react-native-svg';
+import { View } from 'react-native';
 import {
   CardContainer,
   CardCover,
@@ -13,6 +14,7 @@ import {
 
 import { Spacer } from '../../../../components/Spacer';
 import { Text } from '../../../../components/Typography';
+import { Favourite } from '../../../../components/Favourite';
 
 import star from '../../../../../assets/star';
 import open from '../../../../../assets/open';
@@ -32,7 +34,10 @@ export const CardInfo = ({ restaurant }) => {
 
   return (
     <CardContainer elevation={5}>
-      <CardCover key={name} source={{ uri: photos[0] }} />
+      <View>
+        <Favourite restaurant={restaurant} />
+        <CardCover key={name} source={{ uri: photos[0] }} />
+      </View>
       <Info>
         <Text variant="label">{name}</Text>
         <Section>
