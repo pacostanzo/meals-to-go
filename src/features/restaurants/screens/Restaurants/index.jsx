@@ -6,15 +6,17 @@ import { CardInfo } from '../../components/CardInfo';
 import { Spacer } from '../../../../components/Spacer';
 import { SafeArea } from '../../../../components/SafeArea';
 import { Spinner } from '../../../../components/Spinner';
-import { FavouriteBar } from '../../../components/FavouriteBar';
+import { FavouritesBar } from '../../../../components/FavouritesBar';
 
 import { RestaurantListContainer } from './Restaurants.styles';
 
 import { RestaurantsContext } from '../../../../services/restaurants/restaurants.context';
+import { FavouritesContext } from '../../../../services/favourites/favourites.context';
 import { SearchBar } from '../../components/SearchBar';
 
 export const RestaurantsScreen = ({ navigation }) => {
   const { isLoading, restaurants } = useContext(RestaurantsContext);
+  const { favourites } = useContext(FavouritesContext);
   const [isToggled, setIsToggled] = useState(false);
 
   return (
@@ -26,7 +28,12 @@ export const RestaurantsScreen = ({ navigation }) => {
         isFavouritesToggled={isToggled}
         onFavouritesToggle={() => setIsToggled(!isToggled)}
       />
-      {isToggled && <FavouriteBar />}
+      {isToggled && (
+        <FavouritesBar
+          favourites={favourites}
+          onNavigate={navigation.navigate}
+        />
+      )}
       <RestaurantListContainer
         data={restaurants}
         renderItem={({ item }) => {
