@@ -15,7 +15,18 @@ const createScreenOptions = () => {
 export const AccountNavigator = () => (
   <Stack.Navigator screenOptions={createScreenOptions}>
     <Stack.Screen name="Main" component={AccountScreen} />
-    <Stack.Screen name="Login" component={LoginScreen} />
+    <Stack.Screen
+      options={{
+        headerShown: true,
+        headerTransparent: true,
+        headerBackTitleVisible: false,
+        headerTitleStyle: {
+          color: 'transparent',
+        },
+      }}
+      name="Login"
+      component={LoginScreen}
+    />
     <Stack.Screen name="Register" component={RegisterScreen} />
   </Stack.Navigator>
 );

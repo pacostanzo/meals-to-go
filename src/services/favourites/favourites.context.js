@@ -9,7 +9,7 @@ export const FavouritesContextProvider = ({ children }) => {
   const saveFavourites = async (value) => {
     try {
       const jsonValue = JSON.stringify(value);
-      await AsyncStorage.setItem('@favourites', jsonValue);
+      await AsyncStorage.setItem('@favourites_', jsonValue);
     } catch (e) {
       console.log('error storing', e);
     }
@@ -17,7 +17,7 @@ export const FavouritesContextProvider = ({ children }) => {
 
   const loadFavourites = async () => {
     try {
-      const value = await AsyncStorage.getItem('@favourites');
+      const value = await AsyncStorage.getItem('@favourites_');
       if (value !== null) {
         setFavourites(JSON.parse(value));
       }

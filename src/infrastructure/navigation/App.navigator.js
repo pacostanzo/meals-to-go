@@ -35,9 +35,9 @@ const createScreenOptions = ({ route }) => {
 };
 
 export const AppNavigator = () => (
-    <Tab.Navigator screenOptions={createScreenOptions}>
-      <Tab.Screen name="TRestaurants" component={RestaurantsNavigator} />
-      <Tab.Screen name="Map" component={MapScreen} />
-      <Tab.Screen name="Settings" component={Settings} />
-    </Tab.Navigator>
+  <Tab.Navigator screenOptions={createScreenOptions}>
+    <Tab.Screen name="TRestaurants" component={RestaurantsNavigator} />
+    <Tab.Screen name="Map" component={MapScreen} />
+    <Tab.Screen name="Settings" component={Settings} />
+  </Tab.Navigator>
 );
