@@ -26,6 +26,7 @@ export const AuthenticationContextProvider = ({ children }) => {
       setError('Error: Passwords do not match');
       return;
     }
+    setIsLoading(true);
     registerRequest(email, password)
       .then((u) => {
         setUser(u);
