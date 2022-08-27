@@ -27,6 +27,17 @@ export const AccountNavigator = () => (
       name="Login"
       component={LoginScreen}
     />
-    <Stack.Screen name="Register" component={RegisterScreen} />
+    <Stack.Screen
+      options={{
+        headerShown: true,
+        headerTransparent: true,
+        headerBackTitleVisible: false,
+        headerTitleStyle: {
+          color: 'transparent',
+        },
+      }}
+      name="Register"
+      component={RegisterScreen}
+    />
   </Stack.Navigator>
 );
