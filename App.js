@@ -1,5 +1,6 @@
 import { StatusBar as ExpoStatusBar } from 'expo-status-bar';
 import React from 'react';
+import { LogBox } from 'react-native';
 
 import { ThemeProvider } from 'styled-components/native';
 import { theme } from './src/infrastructure/theme';
@@ -17,6 +18,9 @@ import { FavouritesContextProvider } from './src/services/favourites/favourites.
 import { AuthenticationContextProvider } from './src/services/authentication/authentication.context';
 
 export default function App() {
+  LogBox.ignoreLogs([
+    'AsyncStorage has been extracted from react-native core and will be removed in a future release.',
+  ]);
   const [oswaldLoaded] = useOswald({
     Oswald_400Regular,
   });
