@@ -1,8 +1,8 @@
 import React from 'react';
 import { ScrollView, TouchableOpacity } from 'react-native';
-import { Spacer } from '../Spacer';
-import { CompactRestaurantInfo } from '../../features/restaurants/components/CompactCardInfo';
-import { Text } from '../Typography';
+import { Spacer } from '../../../../components/Spacer';
+import { CompactRestaurantInfo } from '../../../restaurants/components/CompactCardInfo';
+import { Text } from '../../../../components/Typography';
 
 import { FavouritesWrapper } from './FavouritesBar.styles';
 

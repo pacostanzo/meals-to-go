@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { AntDesign } from '@expo/vector-icons';
 
-import { FavouritesContext } from '../../services/favourites/favourites.context';
+import { FavouritesContext } from '../../../../services/favourites/favourites.context';
 import { FavouriteButton } from './Favourite.styles';
 
 export const Favourite = ({ restaurant }) => {

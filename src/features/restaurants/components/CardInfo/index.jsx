@@ -14,7 +14,7 @@ import {
 
 import { Spacer } from '../../../../components/Spacer';
 import { Text } from '../../../../components/Typography';
-import { Favourite } from '../../../../components/Favourite';
+import { Favourite } from '../../../favourites/components/Favourite';
 
 import star from '../../../../../assets/star';
 import open from '../../../../../assets/open';

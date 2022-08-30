@@ -2,13 +2,12 @@ import React, { useContext, useState } from 'react';
 import { TouchableOpacity } from 'react-native';
 import { Colors } from 'react-native-paper';
 
+import { RestaurantList } from '../../../restaurants/components/List';
 import { CardInfo } from '../../components/CardInfo';
 import { Spacer } from '../../../../components/Spacer';
 import { SafeArea } from '../../../../components/SafeArea';
 import { Spinner } from '../../../../components/Spinner';
-import { FavouritesBar } from '../../../../components/FavouritesBar';
-
-import { RestaurantListContainer } from './Restaurants.styles';
+import { FavouritesBar } from '../../../../features/favourites/components/FavouritesBar';
 
 import { RestaurantsContext } from '../../../../services/restaurants/restaurants.context';
 import { FavouritesContext } from '../../../../services/favourites/favourites.context';
@@ -34,7 +33,7 @@ export const RestaurantsScreen = ({ navigation }) => {
           onNavigate={navigation.navigate}
         />
       )}
-      <RestaurantListContainer
+      <RestaurantList
         data={restaurants}
         renderItem={({ item }) => {
           return (
