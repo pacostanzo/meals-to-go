@@ -51,6 +51,6 @@ export const AnimationWrapper = styled.View`
   height: 32%;
   position: absolute;
   top: 2px;
-  padding: ${(props) => props.theme.space.MEDIUM};
+  padding: ${(props) => props.theme.space.SMALL};
   background-color: 'transparent';
 `;
