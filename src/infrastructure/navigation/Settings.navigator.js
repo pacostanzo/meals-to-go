@@ -1,5 +1,6 @@
 import React from 'react';
 import { SettingsScreen } from '../../features/settings/screens/Settings';
+import { FavouritesScreen } from '../../features/favourites/screens/Favourites';
 
 import {
   createStackNavigator,
@@ -23,7 +24,7 @@ export const SettingsNavigator = ({ route, navigation }) => {
         name="Settings"
         component={SettingsScreen}
       />
-      <SettingsStack.Screen name="Favourites" component={() => null} />
+      <SettingsStack.Screen name="Favourites" component={FavouritesScreen} />
     </SettingsStack.Navigator>
   );
 };
