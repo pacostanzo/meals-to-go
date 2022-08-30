@@ -45,3 +45,12 @@ export const ErrorContainer = styled.View`
   margin-top: ${(props) => props.theme.space.SMALL};
   margin-bottom: ${(props) => props.theme.space.SMALL};
 `;
+
+export const AnimationWrapper = styled.View`
+  width: 100%;
+  height: 33%;
+  position: absolute;
+  top: 2px;
+  padding: ${(props) => props.theme.space.SMALL};
+  background-color: 'transparent';
+`;
