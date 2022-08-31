@@ -7,6 +7,7 @@ import { CardInfo } from '../../components/CardInfo';
 import { Spacer } from '../../../../components/Spacer';
 import { SafeArea } from '../../../../components/SafeArea';
 import { Spinner } from '../../../../components/Spinner';
+import { FadeInView } from '../../../../components/FadeInView';
 import { FavouritesBar } from '../../../../features/favourites/components/FavouritesBar';
 
 import { RestaurantsContext } from '../../../../services/restaurants/restaurants.context';
@@ -45,7 +46,9 @@ export const RestaurantsScreen = ({ navigation }) => {
               }
             >
               <Spacer position="bottom" size="large">
-                <CardInfo restaurant={item} />
+                <FadeInView>
+                  <CardInfo restaurant={item} />
+                </FadeInView>
               </Spacer>
             </TouchableOpacity>
           );
