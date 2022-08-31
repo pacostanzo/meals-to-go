@@ -18,7 +18,7 @@ export const SettingsNavigator = ({ route, navigation }) => {
     >
       <SettingsStack.Screen
         options={{
-          header: () => null,
+          headerShown: false,
         }}
         name="TSettings"
         component={SettingsScreen}
