@@ -23,7 +23,16 @@ export const SettingsNavigator = ({ route, navigation }) => {
         name="TSettings"
         component={SettingsScreen}
       />
-      <SettingsStack.Screen name="Favourites" component={FavouritesScreen} />
+      <SettingsStack.Screen
+        options={{
+          headerBackTitleVisible: false,
+          headerTitleStyle: {
+            color: 'transparent',
+          },
+        }}
+        name="Favourites"
+        component={FavouritesScreen}
+      />
     </SettingsStack.Navigator>
   );
 };
